@@ -1,0 +1,43 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoticiasMVVM.Views.Home.HomePage">
+
+    <StackLayout Padding="20">
+
+        <Label Text="News" 
+               FontSize="30" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               Margin="0,0,0,20"/>
+        
+       
+        <SearchBar Placeholder="Search by title"
+                   TextChanged="OnSearchBarTextChanged"
+                   SearchButtonPressed="OnSearchButtonPressed"/>
+
+        
+        <ListView x:Name="ArticlesListView"
+                  ItemsSource="{Binding FilteredArticles}"
+                  HasUnevenRows="True"
+                  ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="10">
+                            <StackLayout Padding="20" Spacing="15">
+                                
+                                <Image Source="{Binding UrlToImage}" HeightRequest="200" Aspect="AspectFill" />
+
+                               
+                                <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" LineBreakMode="WordWrap" Margin="0,0,0,10"/>
+
+                                
+                                <Label Text="{Binding Description}" FontSize="14" LineBreakMode="WordWrap" Margin="0,0,0,10"/>
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

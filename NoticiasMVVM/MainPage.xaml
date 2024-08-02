@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:NoticiasMVVM.Views.Home"
+            xmlns:local1="clr-namespace:NoticiasMVVM.Views.Info"
+            x:Class="NoticiasMVVM.MainPage">
+
+    <TabbedPage.Children>
+        <NavigationPage Title="Home" IconImageSource="home.png">
+            <x:Arguments>
+                <local:HomePage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Info" IconImageSource="info.png">
+            <x:Arguments>
+                <local1:InfoPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+    
+</TabbedPage>
+

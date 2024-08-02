@@ -1,0 +1,30 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoticiasMVVM.Views.Details.DetailsPage">
+
+    <StackLayout Padding="20">
+        
+        <Label Text="Details New" 
+               FontSize="30" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               Margin="0,0,0,20"/>
+        
+       
+        <Image Source="{Binding ImageUrl}" 
+               HeightRequest="300" 
+               Aspect="AspectFill" />
+
+        
+        <Label Text="{Binding Title}" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               Margin="0,0,0,10"/>
+
+        
+        <Label Text="{Binding Description}" 
+               FontSize="16" 
+               LineBreakMode="WordWrap"/>
+    </StackLayout>
+</ContentPage>
+
